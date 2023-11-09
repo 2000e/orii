@@ -2,7 +2,9 @@ import 'package:dio/dio.dart';
 
 void main(List<String> args) async {
   final dio = Dio(BaseOptions(
-      baseUrl: "https://api.xygeng.cn", connectTimeout: Duration(seconds: 2)));
+      baseUrl: "https://api.xygeng.cn",
+      sendTimeout: Duration(seconds: 1),
+      connectTimeout: Duration(seconds: 1)));
   try {
     Response response = await dio.get("/one");
     dio.close();

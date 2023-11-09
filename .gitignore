@@ -3,4 +3,5 @@
 .dart_tool/
 *.exe
 *.yaml
+!pubspec.yaml
 *.lock
